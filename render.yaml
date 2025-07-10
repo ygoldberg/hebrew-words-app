@@ -10,11 +10,12 @@ services:
     envVars:
       - key: DATABASE_URL
         value: postgresql://placeholder
-  - type: static
+
+  - type: web
     name: hebrew-words-app
-    env: static
+    env: node
     region: oregon
     plan: free
     buildCommand: npm run build
-    staticPublishPath: dist
+    startCommand: serve -s dist
     rootDir: frontend
