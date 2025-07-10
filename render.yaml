@@ -17,5 +17,5 @@ services:
     region: oregon
     plan: free
     buildCommand: npm install && npm run build
-    startCommand: serve -s dist
+    startCommand: npx serve -s dist
     rootDir: frontend
