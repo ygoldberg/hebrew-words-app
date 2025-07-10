@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .font-hebrew {
+    font-family: 'Varela Round', sans-serif;
+  }
+  body {
+    @apply font-sans;
+  }
+  .rtl {
+    direction: rtl;
+  }
+}

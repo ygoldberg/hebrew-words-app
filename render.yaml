@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: hebrew-words-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
+    rootDir: backend
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://placeholder
+  - type: static
+    name: hebrew-words-app
+    env: static
+    region: oregon
+    plan: free
+    buildCommand: npm run build
+    staticPublishPath: dist
+    rootDir: frontend

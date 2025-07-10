@@ -1,0 +1,37 @@
+# Ensure consistent line endings across OSes
+* text=auto
+
+# Explicitly declare common text file types
+*.py text
+*.ts text
+*.tsx text
+*.js text
+*.jsx text
+*.json text
+*.html text
+*.css text
+*.md text
+*.yml text
+*.yaml text
+
+# Treat shell scripts and env files as text
+*.sh text
+.env text
+
+# Mark lock files and config as text
+package-lock.json text
+requirements.txt text
+
+# Optional: mark generated files (e.g., Vite output)
+frontend/dist/* linguist-generated
+
+# Optional: ignore Jupyter notebook output (if you ever use them)
+*.ipynb filter=clean
+
+# Optional: normalize line endings on common binary/text files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.woff binary
+*.woff2 binary
