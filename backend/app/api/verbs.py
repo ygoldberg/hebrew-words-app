@@ -25,6 +25,6 @@ except Exception as e:
     print(f"⚠️ Failed to load data.json: {e}")
     VERBS = FALLBACK_VERBS
 
-@router.get("/verbs")
+@router.get("/")
 def get_verbs():
     return VERBS
